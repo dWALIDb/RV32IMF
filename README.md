@@ -50,7 +50,7 @@ uppon interrupting.
 If the internal interrupt flag is high and an interrupt is issued, it won't be acknowledged untill the instruction is executed and interrupt signal is still high, then the control unit 
 enters the interrupt state where interrupt_acknoledged signal is high to enable the following :  
 -PC recieves the interrupt service routine.  
--The interrupted instruction is stored in the register address specified in the interrupt enable instruction.
+-The interrupted instruction is stored in the register address specified in the interrupt enable instruction.  
 -Internal interrupt flag is disabled.
 After that the ISR is executed normally.  
 
