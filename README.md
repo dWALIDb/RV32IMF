@@ -42,13 +42,20 @@ This stage desides what data to write back to registers of the decode stage alon
 
 # INTERRUPTS AND MY CUSTOM INSTRUCTIONS
 Interrupts are not discussed widely in this ISA (at least i didn't find information) so i decided to design my own instructions for that.  
+
 **INTERRUPT ENABLE INSTRUCTION:** it enables interrupt flag in control unit to accept interrupts, it is incoded as the JALR instruction but has different opcode. RD is used to store the 
 address of the program counter of the interrupted instruction, RS1 and 12-bit immediate are used to generate the *INTERRUPT SERVICE ROUTINE* that is stored in MEMORY STAGE to be used 
 uppon interrupting.  
+
 If the internal interrupt flag is high and an interrupt is issued, it won't be acknowledged untill the instruction is executed and interrupt signal is still high, then the control unit 
 enters the interrupt state where interrupt_acknoledged signal is high to enable the following :  
 -PC recieves the interrupt service routine.  
 -The interrupted instruction is stored in the register address specified in the interrupt enable instruction.
 -Internal interrupt flag is disabled.
-After that the ISR is executed normally.
-**INTERRUPT DISABLE INSTRUCTION:** it disables interrupts so the signal will not affect the program flow.
+After that the ISR is executed normally.  
+
+**INTERRUPT DISABLE INSTRUCTION:** it disables interrupts so the signal will not affect the program flow.  
+
+**INPUT DATA INSTRUCTION:** it is enoded as a load instruction but has different opcode and has source address1 as 0 because it reads user data into the ram.  
+
+**OUTPUT DATA INSTRUCTION:** it is encoded as a store instruction but has different opcode and write address is 0 because it outputs data to the user.
