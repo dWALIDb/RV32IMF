@@ -121,5 +121,4 @@ the following table organizes all the instructions:
 |JUMP AND LINK REGISTER|JALR rd,rs1,12_bit_offset|rd=pc+4;pc=rs1+12_bit_offset|
 |LOAD WORD|LW rd,rs1,12_bit_offset|PUT CONTENT OF ADDRESS RS1+12_bit_offset IN rd|
 |STORE WORD|SW rs1,rs2,12_bit_offset|PUT rs1 IN ADDRESS=rs2+12_bit_offset|
-|ENABLE INTERRUPT|INTERRUPT_ENBALE rd,rs1,12_bit_offset|PUT INTERRUPTED ADDRESS IN rd AND LOAD SERVICE ROUTINE REGSITER WITH 
-rs1+12_bit_offset|
+|ENABLE INTERRUPT|INTERRUPT_ENBALE rd,rs1,12_bit_offset|PUT INTERRUPTED ADDRESS IN rd AND ISR=rs1+12_bit_offset|
