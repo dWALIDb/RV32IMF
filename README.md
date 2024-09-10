@@ -98,7 +98,6 @@ the following table organizes all the instructions:
 |SHIFT RIGHT ARITHMETIC|SRAI rd,rs1,5_bit_immediate|SHIFT rs1 BY 5_bit_immediate THEN PUT IN rd|
 |SET LESS THAN|SLTI rd,rs1,5_bit_immediate|rd=1 when rs1<5_bit_immediate else rd=0 |
 |SET LESS THAN UNSIGNED|SLTIU rd,rs1,5_bit_immediate|rd=1 when rs1<5_bit_immediate else rd=0 |
-|SET LESS THAN UNSIGNED|SLTIU rd,rs1,5_bit_immediate|rd=1 when rs1<5_bit_immediate else rd=0 |
 |MULTIPLY INTEGER|MUL rd,rs1,rs2|MULTIPLY INTEGER AND PUT lower 32 BITS IN rd|
 |MULTIPLY INTEGER|MULH rd,rs1,rs2|MULTIPLY INTEGER AND PUT UPPER 32 BITS IN rd|
 |MULTIPLY INTEGER|MULHSU rd,rs1,rs2|MULTIPLY INTEGER rs1 SIGNED AND rs2 UNSIGNED AND PUT UPPER 32 BITS IN rd|
@@ -106,7 +105,6 @@ the following table organizes all the instructions:
 |DIVIDE INTEGER|DIV rd,rs1,rs2|DIVIDE INTEGER  AND PUT IN rd|
 |DIVIDE INTEGER|DIVU rd,rs1,rs2|DIVIDE INTEGER UNSIGNED AND PUT IN rd|
 |REMAINDER INTEGER|REM rd,rs1,rs2|REMAINDER INTEGER  AND PUT IN rd|
-|REMAINDER INTEGER|REMU rd,rs1,rs2|REMAINDER INTEGER UNSIGNED AND PUT IN rd|
 |REMAINDER INTEGER|REMU rd,rs1,rs2|REMAINDER INTEGER UNSIGNED AND PUT IN rd|
 |ADD FLOATS|FADD rd,rs1,rs2|ADD FLOATS rs1 AND rs2 AND PUT IN rd|
 |MULTIPLY FLOATS|FMUL rd,rs1,rs2|MUL FLOATS rs1 AND rs2 AND PUT IN rd|
