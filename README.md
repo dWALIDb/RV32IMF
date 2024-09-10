@@ -61,4 +61,12 @@ After that the ISR is executed normally.
 **OUTPUT DATA INSTRUCTION:** it is encoded as a store instruction but has different opcode and write address is 0 because it outputs data to the user.  
 # RISC V ASSEMBLER 
 The assembler is written in C++, the header file *"assembler_class"* provides the **assembler** class and the methods for converting 
-assembly to machine code. The instruction can have no operands up to 3 operands, the following table explains all the instructions:
+assembly to machine code. The instruction can have no operands up to 3 operands.  
+the following table organizes all the instructions:
+| INSTRUCTION | ASSEMBLY FORMAT | DESCRIPTION |
+|:-----------:|:---------------:|:-----------:|
+|INTERRUPT_DISABLE|INTERRUPT_DISABLE|NO INTERRUPTS ARE CONSIDERED|
+|JUMP AND LINK|JAL rd,20_bit_offset|rd=pc+4 , pc=pc+4+20_bit_OFFSET|
+|:-----------:|:---------------:|:-----------:|
+|:-----------:|:---------------:|:-----------:|
+|:-----------:|:---------------:|:-----------:|
