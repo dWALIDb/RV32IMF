@@ -62,8 +62,10 @@ After that the ISR is executed normally.
 # RISC V ASSEMBLER 
 The assembler is written in C++, the header file *"assembler_class"* provides the **assembler** class and the methods for converting 
 assembly to machine code. The instruction can have no operands up to 3 operands.
+
 *Labels* can be used to simplify branches and offset calculation, they have the following syntax:  
                 .label   
+
 **For Branches and jumps**: the program counter would be already incremented, so the calculation is different when the offset is negative or prositive  
 for example:  
 lui x1,2  
@@ -85,9 +87,12 @@ jal x0,loop1
 .loop2  
 nop  
 In this case the program still does the same but the offset is different because the branch is not included in the calculation,so **OFFSET IS 4**.  
+
 *Origins* are used to specify the address of a special subroutine to load in a desired address, for exaple we want a subroutine on address 20 in decimal:  
 #20  
 --rest of subroutine--  
+
+*Comments* are used to better understand programs, the syntax is as follows:       ;this is a comment :)  
 
 the following table organizes all the instructions:
 | INSTRUCTION | ASSEMBLY FORMAT | DESCRIPTION |
