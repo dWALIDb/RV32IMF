@@ -74,7 +74,7 @@ addi x1,x0,-1
 out_data x1,0  
 bneq x0,x1,loop  
 nop  
-<rest of program>
+<rest of program>  
 In this case the program decrements and outputs untill 0, the branch offset is calculated considering that the program already points to nop, then we must include the branch instruction 
 in the offset, so **OFFSET IS -3**.  
 But for the next example: 
