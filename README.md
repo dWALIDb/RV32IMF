@@ -66,6 +66,7 @@ the following table organizes all the instructions:
 | INSTRUCTION | ASSEMBLY FORMAT | DESCRIPTION |
 |:-----------:|:---------------:|:-----------:|
 |INTERRUPT_DISABLE|INTERRUPT_DISABLE|NO INTERRUPTS ARE CONSIDERED|
+|NO OPERANTION|NOP|EBCODED AS ADD x0,x0,x0|
 |JUMP AND LINK|JAL rd,20_bit_offset|rd=pc+4 , pc=pc+4+20_bit_OFFSET|
 |ADD UPPER IMMEDIATE TO pc|AUIPC rd,upper_20_bit_offset|rd=pc+upper_20_bit_offset|
 |LOAD UPPER IMMEDIATE|LUI rd,upper_20_bit_immediate|rd=upper_20_bit_immediate|
@@ -122,3 +123,4 @@ the following table organizes all the instructions:
 |LOAD WORD|LW rd,rs1,12_bit_offset|PUT CONTENT OF ADDRESS RS1+12_bit_offset IN rd|
 |STORE WORD|SW rs1,rs2,12_bit_offset|PUT rs1 IN ADDRESS=rs2+12_bit_offset|
 |ENABLE INTERRUPT|INTERRUPT_ENBALE rd,rs1,12_bit_offset|PUT INTERRUPTED ADDRESS IN rd AND ISR=rs1+12_bit_offset|
+
