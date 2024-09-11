@@ -98,7 +98,7 @@ the following table organizes all the instructions:
 | INSTRUCTION | ASSEMBLY FORMAT | DESCRIPTION |
 |:-----------:|:---------------:|:-----------:|
 |INTERRUPT_DISABLE|INTERRUPT_DISABLE|NO INTERRUPTS ARE CONSIDERED|
-|NO OPERANTION|NOP|EBCODED AS ADD x0,x0,x0|
+|NO OPERANTION|NOP|ENCODED AS ADD x0,x0,x0|
 |JUMP AND LINK|JAL rd,20_bit_offset|rd=pc+4 , pc=pc+4+20_bit_OFFSET|
 |ADD UPPER IMMEDIATE TO pc|AUIPC rd,upper_20_bit_offset|rd=pc+upper_20_bit_offset|
 |LOAD UPPER IMMEDIATE|LUI rd,upper_20_bit_immediate|rd=upper_20_bit_immediate|
