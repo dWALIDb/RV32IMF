@@ -61,7 +61,33 @@ After that the ISR is executed normally.
 **OUTPUT DATA INSTRUCTION:** it is encoded as a store instruction but has different opcode and write address is 0 because it outputs data to the user.  
 # RISC V ASSEMBLER 
 The assembler is written in C++, the header file *"assembler_class"* provides the **assembler** class and the methods for converting 
-assembly to machine code. The instruction can have no operands up to 3 operands.  
+assembly to machine code. The instruction can have no operands up to 3 operands.
+*Labels* can be used to simplify branches and offset calculation, they have the following syntax:  
+                <rest of program>
+                .label 
+                <rest of program>
+**For Branches and jumps**: the program counter would be already incremented, so the calculation is different when the offset is negative or prositive  
+for example:  
+lui x1,2  
+.loop  
+addi x1,x0,-1  
+out_data x1,0  
+bneq x0,x1,loop  
+nop  
+<rest of program>
+In this case the program decrements and outputs untill 0, the branch offset is calculated considering that the program already points to nop, then we must include the branch instruction 
+in the offset, so **OFFSET IS -3**.  
+But for the next example: 
+lui x1,2
+.loop1
+out_data x1,0
+bneq x0,x1,loop2
+addi x1,x0,-1  
+out_data x1,0   
+jal x0,loop1  
+.loop2  
+nop  
+In this case the program still does the same but the offset is different because the branch is not included in the calculation,so **OFFSET IS 4**
 the following table organizes all the instructions:
 | INSTRUCTION | ASSEMBLY FORMAT | DESCRIPTION |
 |:-----------:|:---------------:|:-----------:|
