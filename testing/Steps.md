@@ -15,4 +15,14 @@ This folder contains an example on how to run programs on the designed risc V pr
  
  ![program](/testing/assembler.PNG)  
 
+  The machine code:  
  
+ ![program](/testing/machine_code.PNG)  
+ 
+  Changing file path for simulation:  
+ 
+ ![program](/testing/changing_file_path.PNG)  
+  
+  Simulation output:  
+ 
+ ![program](/testing/simulation_output.PNG)  
