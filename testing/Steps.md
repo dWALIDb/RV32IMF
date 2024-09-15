@@ -11,8 +11,8 @@ This folder contains an example on how to run programs on the designed risc V pr
  
  ![program](/testing/assembly_program.png)  
 
- The generated machine code:  
+ The C++ code to generate the machine code:  
  
- ![program](/testing/assembly_program.png)  
+ ![program](/testing/assembler.PNG)  
 
  
