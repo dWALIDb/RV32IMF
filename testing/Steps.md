@@ -8,4 +8,4 @@ This folder contains an example on how to run programs on the designed risc V pr
 
  # Applying the steps:
  The program:  
- ![program](assembly_proram.png)
+ ![program](/testing/assembly_program.png)
