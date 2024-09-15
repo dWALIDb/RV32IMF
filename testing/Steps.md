@@ -7,4 +7,5 @@ This folder contains an example on how to run programs on the designed risc V pr
 - Compile and the run the simulation/synthesis.
 
  # Applying the steps:
- 
+ The program:
+  ![program](RISC-V-CORE-WITH-VHDL/testing/assembly_proram.png)
