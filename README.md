@@ -159,6 +159,6 @@ the following table organizes all the instructions:
 
 **NOTES :** 
 - All register references must have lower case 'x' before them example register 0 is x0.  
-- All addresses are referenced in decimal.
+- All addresses and immediate values are referenced in decimal.
 - assemble(input_path,output_path) is the main method, it takes the assembly program and converts it to machine code to write in output file.
 - generate_byte_mif(output_path,mif_path,depth) generates byte addressable initialization of memory.
