@@ -1,5 +1,6 @@
 -- this file is used for synthesis,and is providing PC,SEVEN SEGMENT DISPLAY
--- so when we test the values 
+-- the synthesis file directories are used to initialize the memories
+-- more outputs are provided to prevent the synthesizer from omitting logic :)
 library ieee;
 use ieee.std_logic_1164.all;
 
