@@ -1,4 +1,4 @@
-# synthesis of the design  
+# Synthesis of the Design  
 This part is about the synthesis of the design,  
 **FIRST:** the ram of **FETCH** and **MEMORY** stages are changed, this happened because the synthesiser doesn't recognize the older codes tobe synthesisable, so it maps everything to the 
 ground and displays 0 usage of logic.  
@@ -10,4 +10,5 @@ the whole datapath to this adjustement.
 **LAST:** the MIF generation code is changed to generate 4 mifs that are used to initialize the 8xN rams that makeup the 32xN ram. Some outputs are added to the top of the design to keep   
 the synthesizer from stripping some components away.  
 # RESULTS 
-after compilation the synthesiser uses around **6000 logic elements** and another **6000 memory cells**, this is the report that is entended the timing analysis estimates the highest frequency to be around **7MHz**
+after compilation the synthesiser uses around **6000 logic elements** and another **6000 memory cells**, this is the report that is entended the timing analysis estimates the highest 
+frequency to be around **7MHz**
