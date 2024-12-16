@@ -41,7 +41,7 @@ address is taken, else we load the next instruction.
 This stage desides what data to write back to registers of the decode stage along with the address or it writes to the output register that may be used by the user.
 
 # INTERRUPTS AND MY CUSTOM INSTRUCTIONS
-Interrupts are not discussed widely in this ISA (at least i didn't find information) so i decided to design my own instructions for that.  
+Interrupts are not discussed widely in this ISA *(at least i didn't find information)* so i decided to design my own instructions for that.  
 
 **INTERRUPT ENABLE INSTRUCTION:** it enables interrupt flag in control unit to accept interrupts, it is incoded as the JALR instruction but has different opcode. RD is used to store the 
 address of the program counter of the interrupted instruction, RS1 and 12-bit immediate are used to generate the *INTERRUPT SERVICE ROUTINE* that is stored in MEMORY STAGE to be used 
@@ -160,5 +160,18 @@ the following table organizes all the instructions:
 **NOTES :** 
 - All register references must have lower case 'x' before them example register 0 is x0.  
 - All addresses and immediate values are referenced in decimal.
-- assemble(input_path,output_path) is the main method, it takes the assembly program and converts it to machine code to write in output file.
-- generate_byte_mif(output_path,mif_path,depth) generates byte addressable initialization of memory.
+- assemble(input_file_path,output_file_path) is the main method, it takes the assembly program and converts it to machine code to write in output file.
+- generate_byte_mif(output_file_path,mif_path,depth) generates byte addressable initialization of memory.
+
+*output_file_path:* is the file that has the machine code of the program that we want to assemble.
+
+**SOME UPDATES :**
+After some time (2 monthes :o) i changed a lot of stuff.
+-**FIRST:** Architecture was changed to have the instruction and data memories to be outside the cpu, this makes the 
+architecture able to be interfaced with memories outside of the FPGA.  
+-**SECOND:** Input/Output for CPU are different from instruction/data inputs and outputs, now cpu has data from user and data from 2 other memories.
+
+**WEIRD BEHAVIOUR**
+I noticed that when i set the CPU after compilation, the timing reports have different ranges for maximum frequency.  
+Some times the operating frequency is 7 Mhz and it can shoot upto 165 Mhz this is confusing.  
+Maybe in the next months i can explore more into it after synthesis and uploading the design, if the frequency still holds up then synthesiser is trying to optimize away some logic.
