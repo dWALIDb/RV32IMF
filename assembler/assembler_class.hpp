@@ -20,11 +20,12 @@ private:
 
 public:
     std::string form_machine_code(std::string opcode, std::string operands)
-    { // if encountered a label then nothing is here to process
+    { // if encountered a label or comment then nothing is here to process
         if (opcode.at(0) == '.' || opcode.at(0) == ';')
         {
             return " ";
         }
+        //detection of origin changes the value of PC 
         if (opcode.at(0) == '#')
         {
             opcode = strip_from_char(opcode, '#');
@@ -489,6 +490,10 @@ public:
             while (!input_file.eof())
             {
                 std::getline(input_file, label);
+                if (label=="")
+                {
+                    label="; \n";
+                }
 
                 label = strip_from_char(label, ' ');
 
