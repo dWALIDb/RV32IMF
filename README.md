@@ -1,6 +1,6 @@
 # PROJECT
-In this project RISC-V ISA was implemented for a CPU in VHDL to be synthesized, the version of <h3> 2008</h3> because 
-it offers great flexibility for syntax that is very useful in such projects.  
+In this project RISC-V ISA was implemented for a CPU in VHDL to be synthesized,<h2>VHDL 2008</h2>
+because it offers great flexibility for syntax that is very useful in such projects.  
 
 # RISC V
 RISC V is an open Instruction Set Architecture used for the developement of custom processors.  
