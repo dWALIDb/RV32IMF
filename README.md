@@ -17,6 +17,17 @@ devide instructions.
 The design is split into *five* stages to boost performance, and after implementation it turned out to be not as complicated as it seems.  
 the stages are fetch,decode,execute,memory and write back.  
 
+In this implementation, i found a word addressable memory to be easier to work with, hence, i just ignore the 
+2 LSB bits of the instruction memory to make it so it can work with word abressable memory without changing hardware.  
+This works because it increments by 4 and 4 bytes are a word(32-bits) so address 4 points to location 4 on byte addressable 
+memory, and at the same time it points to address 1 on word addressable.  
+00100   -> 00001 
+considering bytes ->considering words  (this means we just ignore 2 LSB bits)  
+
+this doesn't mean that the internal architecture is altered, the internal architecture are made as if memory is 
+byte addressable. It is the way that im using it is as word addressable, this makes work easier and more intuitive 
+for me. :)  
+
 # FETCH STAGE
 The module contains a RAM for instructions, a register that holds the program counter value and it outputs the instruction's op code, functionality fields, read/write addresses and 
 immediate values. it always output PC+4 for next instruction.  
