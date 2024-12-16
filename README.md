@@ -1,5 +1,5 @@
 # PROJECT
-In this project RISC-V ISA was implemented for a CPU in VHDL to be synthesized, the version of VHDL is 2008 because 
+In this project RISC-V ISA was implemented for a CPU in VHDL to be synthesized, the version of <# Zad .0> because 
 it offers great flexibility for syntax that is very useful in such projects.  
 
 # RISC V
