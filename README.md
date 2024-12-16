@@ -1,10 +1,14 @@
+# PROJECT
+In this project RISC-V ISA was implemented for a CPU in VHDL to be synthesized, the version of VHDL is 2008 because 
+it offers great flexibility for syntax that is very useful in such projects.  
+
 # RISC V
 RISC V is an open Instruction Set Architecture used for the developement of custom processors.  
 It is the **fifth** generation of developement hence, the V (in risv-V).  
 The architecture is well documented by the RISC V organization, where the ISA is discussed.  
 It has a base instruction set named RV32I containing all instructions necessary for a fully fledged 32-bit cental processing unit. It still
 offers other extensions for more implementations depending on the manufacturers.  
-  
+
 In this implementation, 2 extensions are considered:  
 **First**,the floating point extension (F) that provides a floating point register file, and instructions that handel floating point operands.  
 **Second**,the integer multiply divide (M) that provides integer multiplication and division instructions.  
@@ -27,7 +31,7 @@ considering bytes ->considering words  (this means we just ignore 2 LSB bits)
 this doesn't mean that the internal architecture is altered, the internal architecture are made as if memory is 
 byte addressable. It is the way that im using it is as word addressable, this makes work easier and more intuitive 
 for me. :)  
-
+The followed architecture is **HARVARD ARCHITECURE** where data and instructions are separated.
 # FETCH STAGE
 The module contains a RAM for instructions, a register that holds the program counter value and it outputs the instruction's op code, functionality fields, read/write addresses and 
 immediate values. it always output PC+4 for next instruction.  
