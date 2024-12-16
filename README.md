@@ -1,5 +1,5 @@
 # PROJECT
-In this project RISC-V ISA was implemented for a CPU in VHDL to be synthesized,***VHDL 2008***
+In this project RISC-V ISA was implemented for a CPU in VHDL to be synthesized,***VHDL version 2008***
 because it offers great flexibility for syntax that is very useful in such projects.  
 
 # RISC V
